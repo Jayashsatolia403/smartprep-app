@@ -515,7 +515,6 @@ def host_weekly_competition(request):
 @api_view(['GET',])
 def get_todays_contest(request):
     try:
-        from datetime import datetime
 
         exam_name = request.GET['exam']
 

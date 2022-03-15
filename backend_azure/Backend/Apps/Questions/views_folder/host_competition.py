@@ -49,7 +49,6 @@ def hostWeeklyCompetition():
     exams = Exams.objects.all()
 
     for exam in exams:
-        import uuid
 
         if exam.name not in exam_questions:
             continue

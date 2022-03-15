@@ -174,8 +174,6 @@ def getQuestionOfTheDay(request):
                 for i in subject.questions.all():
                     if (i.ratings > 4.7 and i.difficulty > 4.7) or i.isExpert:
                         if not QuestionsOfTheDays.objects.filter(question=i):
-
-                            import uuid
                             
                             quesOfDay = QuestionsOfTheDays(date = dateToday, uuid = str(uuid.uuid4()), exam=exam)
                             quesOfDay.save()
